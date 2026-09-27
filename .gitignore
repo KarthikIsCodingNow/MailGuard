@@ -1,0 +1,40 @@
+# Environments
+.venv/
+venv/
+mac_venv/
+env/
+ENV/
+*.venv/
+
+# Environment Variables & Secrets
+backend/.env
+.env
+.env.*
+!.env.example
+!backend/.env.example
+
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Large Raw Datasets (archives and extracted folders)
+backend/datasets/raw/*.tar.bz2
+backend/datasets/raw/*.tar.gz
+backend/datasets/raw/ham/
+backend/datasets/raw/spam/
+
+# IDE / Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo

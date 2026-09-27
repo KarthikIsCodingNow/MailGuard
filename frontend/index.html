@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAILGUARD / TRACE-AI — International Typographic Threat Lab</title>
+  <meta name="description" content="AI-Assisted Email Threat Detection & Forensic Intelligence Platform designed in the International Typographic Style (Swiss Style).">
+  
+  <!-- Typography: Inter (Grotesque Sans-Serif) & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="swiss-grid-pattern">
+
+  <!-- ============================================================ -->
+  <!-- ARCHITECTURAL HEADER & NAVIGATION                            -->
+  <!-- ============================================================ -->
+  <header class="app-header">
+    <div class="header-container">
+      <!-- Brand & Project Identity -->
+      <div class="brand-group">
+        <div class="brand-icon-box">MG</div>
+        <div class="brand-text">
+          <div class="brand-title">
+            MAILGUARD <span class="brand-badge">TRACE-AI</span>
+          </div>
+          <div class="brand-subtitle">Email Forensic &amp; ML Evaluation Platform</div>
+        </div>
+      </div>
+
+      <!-- Swiss Numbered Navigation Tabs -->
+      <nav class="nav-tabs" role="tablist">
+        <button class="nav-tab active" id="tab-eval-btn" data-tab="eval" role="tab" aria-selected="true">
+          <span class="tab-idx">01</span>
+          <span>Evaluation Lab</span>
+        </button>
+        <button class="nav-tab" id="tab-scan-btn" data-tab="scan" role="tab" aria-selected="false">
+          <span class="tab-idx">02</span>
+          <span>Threat Playground</span>
+        </button>
+        <button class="nav-tab" id="tab-arch-btn" data-tab="arch" role="tab" aria-selected="false">
+          <span class="tab-idx">03</span>
+          <span>Architecture &amp; Forensics</span>
+        </button>
+      </nav>
+
+      <!-- Telemetry Status Block -->
+      <div class="header-status">
+        <div class="status-box">
+          <span class="status-dot-active"></span>
+          <span>Text ML: Online</span>
+        </div>
+        <div class="status-box">
+          <span id="header-sample-count">3,108 Samples</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- MAIN APP CONTAINER                                           -->
+  <!-- ============================================================ -->
+  <main class="app-main">
+
+    <!-- ======================================================== -->
+    <!-- 01. ML EVALUATION LAB                                    -->
+    <!-- ======================================================== -->
+    <section class="tab-pane active" id="pane-eval" role="tabpanel">
+      <!-- Section Header Block -->
+      <div class="section-header-block">
+        <div>
+          <span class="section-label">Section 01 // Statistical Analysis</span>
+          <h1 class="display-heading">Evaluation Lab</h1>
+        </div>
+        <div class="section-description">
+          Mathematical study of classification trade-offs on the SpamAssassin corpus. Adjust the decision threshold (&tau;) to observe shifting precision, recall, and error matrices.
+        </div>
+      </div>
+
+      <!-- Asymmetric Top Control Grid (7:5 Split) -->
+      <div class="eval-hero-grid">
+        <!-- Mechanical Threshold Instrument -->
+        <div class="swiss-card">
+          <div class="instrument-header">
+            <div class="instrument-title">
+              <span class="tag-num">&tau;</span>
+              <span>Classification Decision Boundary</span>
+            </div>
+            <div class="threshold-display-block">
+              <span class="threshold-val-large" id="threshold-val-badge">0.50</span>
+              <span class="threshold-val-unit">Threshold</span>
+            </div>
+          </div>
+
+          <div class="slider-container">
+            <div class="slider-track-wrap">
+              <input type="range" id="threshold-slider" min="0.05" max="0.95" step="0.01" value="0.50" aria-label="Classification threshold slider">
+            </div>
+            <div class="slider-scale-labels">
+              <span>0.05 // Aggressive Recall</span>
+              <span>0.25</span>
+              <span>0.50 // Balanced</span>
+              <span>0.75</span>
+              <span>0.95 // Maximum Precision</span>
+            </div>
+          </div>
+
+          <div class="presets-toolbar">
+            <button class="btn-swiss-preset" data-thresh="0.25">
+              <span>High Recall</span>
+              <span class="preset-val">&tau; = 0.25</span>
+            </button>
+            <button class="btn-swiss-preset active" data-thresh="0.50">
+              <span>Balanced</span>
+              <span class="preset-val">&tau; = 0.50</span>
+            </button>
+            <button class="btn-swiss-preset" data-thresh="0.75">
+              <span>High Precision</span>
+              <span class="preset-val">&tau; = 0.75</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Objective Explanatory Panel (Muted with Dot Matrix) -->
+        <div class="swiss-card-muted objective-panel swiss-dots">
+          <div>
+            <div class="panel-header-sm">System Objective &amp; Security Axiom</div>
+            <p class="objective-text">
+              In email threat intelligence, <strong>False Positives</strong> disrupt business communication by quarantining legitimate mail, while <strong>False Negatives</strong> allow credential harvesting and spear-phishing into enterprise inboxes.
+            </p>
+          </div>
+          <div class="objective-stats-row">
+            <div class="stat-box">
+              <span class="stat-label">Model Architecture</span>
+              <span class="stat-val">TF-IDF + LR</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-label">Vocabulary Size</span>
+              <span class="stat-val">100,000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Performance Metrics KPI Grid (6 Columns) -->
+      <div class="kpi-grid">
+        <!-- Accuracy -->
+        <div class="kpi-card" id="kpi-acc">
+          <div class="kpi-header">
+            <span class="kpi-label">Accuracy</span>
+            <span class="kpi-code">ACC</span>
+          </div>
+          <div class="kpi-value" id="val-accuracy">97.4%</div>
+          <div class="kpi-bar-track">
+            <div class="kpi-bar-fill" id="bar-accuracy" style="width: 97.4%;"></div>
+          </div>
+          <div class="kpi-subtext">Overall correct rate</div>
+        </div>
+
+        <!-- Precision -->
+        <div class="kpi-card" id="kpi-prec">
+          <div class="kpi-header">
+            <span class="kpi-label">Precision</span>
+            <span class="kpi-code">PPV</span>
+          </div>
+          <div class="kpi-value" id="val-precision">89.8%</div>
+          <div class="kpi-bar-track">
+            <div class="kpi-bar-fill" id="bar-precision" style="width: 89.8%;"></div>
+          </div>
+          <div class="kpi-subtext">True Threat Ratio</div>
+        </div>
+
+        <!-- Recall -->
+        <div class="kpi-card" id="kpi-rec">
+          <div class="kpi-header">
+            <span class="kpi-label">Recall</span>
+            <span class="kpi-code">TPR</span>
+          </div>
+          <div class="kpi-value" id="val-recall">93.6%</div>
+          <div class="kpi-bar-track">
+            <div class="kpi-bar-fill" id="bar-recall" style="width: 93.6%;"></div>
+          </div>
+          <div class="kpi-subtext">Threat Interception</div>
+        </div>
+
+        <!-- F1 Score -->
+        <div class="kpi-card" id="kpi-f1">
+          <div class="kpi-header">
+            <span class="kpi-label">F1-Score</span>
+            <span class="kpi-code">F1</span>
+          </div>
+          <div class="kpi-value" id="val-f1">0.917</div>
+          <div class="kpi-bar-track">
+            <div class="kpi-bar-fill" id="bar-f1" style="width: 91.7%;"></div>
+          </div>
+          <div class="kpi-subtext">Harmonic Mean</div>
+        </div>
+
+        <!-- ROC-AUC -->
+        <div class="kpi-card" id="kpi-auc">
+          <div class="kpi-header">
+            <span class="kpi-label">ROC-AUC</span>
+            <span class="kpi-code">AUC</span>
+          </div>
+          <div class="kpi-value" id="val-auc">0.993</div>
+          <div class="kpi-bar-track">
+            <div class="kpi-bar-fill" id="bar-auc" style="width: 99.3%;"></div>
+          </div>
+          <div class="kpi-subtext">Separability Power</div>
+        </div>
+
+        <!-- Specificity -->
+        <div class="kpi-card" id="kpi-spec">
+          <div class="kpi-header">
+            <span class="kpi-label">Specificity</span>
+            <span class="kpi-code">TNR</span>
+          </div>
+          <div class="kpi-value" id="val-specificity">98.1%</div>
+          <div class="kpi-bar-track">
+            <div class="kpi-bar-fill" id="bar-specificity" style="width: 98.1%;"></div>
+          </div>
+          <div class="kpi-subtext">Benign Protection</div>
+        </div>
+      </div>
+
+      <!-- Analytics Row: Confusion Matrix & Performance Curves -->
+      <div class="analytics-row">
+        <!-- Confusion Matrix Card -->
+        <div class="analytics-card">
+          <div class="card-header">
+            <div class="card-title">
+              <span class="card-num">01.1</span>
+              <span>Confusion Matrix Matrix</span>
+            </div>
+            <span class="card-subtitle">&tau; = <span id="cm-thresh-label">0.50</span></span>
+          </div>
+
+          <div class="cm-container">
+            <div class="cm-table-grid">
+              <div class="cm-corner"></div>
+              <div class="cm-col-head">Pred: HAM</div>
+              <div class="cm-col-head">Pred: SPAM</div>
+
+              <div class="cm-row-head">Act: HAM</div>
+              <div class="cm-cell cell-tn" id="cell-tn">
+                <div class="cell-label">True Negative [TN]</div>
+                <div class="cell-count" id="val-tn">518</div>
+                <div class="cell-desc">Clean mail allowed</div>
+              </div>
+              <div class="cm-cell cell-fp" id="cell-fp">
+                <div class="cell-label">False Positive [FP]</div>
+                <div class="cell-count" id="val-fp">10</div>
+                <div class="cell-desc">False alarms (Blocked)</div>
+              </div>
+
+              <div class="cm-row-head">Act: SPAM</div>
+              <div class="cm-cell cell-fn" id="cell-fn">
+                <div class="cell-label">False Negative [FN]</div>
+                <div class="cell-count" id="val-fn">6</div>
+                <div class="cell-desc">Missed Threats</div>
+              </div>
+              <div class="cm-cell cell-tp" id="cell-tp">
+                <div class="cell-label">True Positive [TP]</div>
+                <div class="cell-count" id="val-tp">88</div>
+                <div class="cell-desc">Threats intercepted</div>
+              </div>
+            </div>
+
+            <!-- Error Telemetry -->
+            <div class="error-rates-bar">
+              <div class="rate-item">
+                <span class="rate-title">False Positive Rate (FPR)</span>
+                <span class="rate-val" id="val-fpr">1.89%</span>
+              </div>
+              <div class="rate-item">
+                <span class="rate-title">False Negative Rate (FNR)</span>
+                <span class="rate-val" id="val-fnr">6.38%</span>
+              </div>
+              <div class="rate-item">
+                <span class="rate-title">Test Sample Size</span>
+                <span class="rate-val" id="val-test-count">622 Units</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Performance Curves Card -->
+        <div class="analytics-card">
+          <div class="card-header">
+            <div class="card-title">
+              <span class="card-num">01.2</span>
+              <span>Discriminant Curves</span>
+            </div>
+            <div class="curve-toggle-group">
+              <button class="btn-toggle active" id="btn-show-roc" data-curve="roc">ROC Curve</button>
+              <button class="btn-toggle" id="btn-show-pr" data-curve="pr">Precision-Recall</button>
+            </div>
+          </div>
+
+          <div class="chart-container swiss-diagonal">
+            <svg class="interactive-chart" id="chart-svg" viewBox="0 0 450 250">
+              <!-- Grid lines -->
+              <line x1="45" y1="20" x2="430" y2="20" class="chart-grid"/>
+              <line x1="45" y1="75" x2="430" y2="75" class="chart-grid"/>
+              <line x1="45" y1="130" x2="430" y2="130" class="chart-grid"/>
+              <line x1="45" y1="185" x2="430" y2="185" class="chart-grid"/>
+              <line x1="45" y1="225" x2="430" y2="225" class="chart-axis"/>
+              <line x1="45" y1="20" x2="45" y2="225" class="chart-axis"/>
+
+              <!-- Axis Numeric Labels -->
+              <text x="45" y="242" class="chart-label">0.0</text>
+              <text x="237" y="242" class="chart-label">0.5</text>
+              <text x="420" y="242" class="chart-label">1.0</text>
+              <text x="24" y="228" class="chart-label">0.0</text>
+              <text x="24" y="133" class="chart-label">0.5</text>
+              <text x="24" y="25" class="chart-label">1.0</text>
+
+              <!-- Reference Line -->
+              <line x1="45" y1="225" x2="430" y2="20" class="chart-ref-line" id="chart-baseline"/>
+
+              <!-- Main Curve Path -->
+              <path id="chart-curve-path" d="" class="chart-curve"/>
+
+              <!-- Operating Point Dot -->
+              <circle id="chart-dot" cx="45" cy="225" r="5" class="chart-point"/>
+              <circle id="chart-dot-pulse" cx="45" cy="225" r="9" class="chart-point-pulse"/>
+
+              <!-- Axis Titles -->
+              <text x="237" y="248" text-anchor="middle" class="chart-axis-title" id="chart-x-title">False Positive Rate (FPR)</text>
+              <text x="14" y="125" text-anchor="middle" transform="rotate(-90 14,125)" class="chart-axis-title" id="chart-y-title">True Positive Rate (TPR / Recall)</text>
+            </svg>
+          </div>
+
+          <div class="chart-legend">
+            <div class="legend-item">
+              <span class="legend-color-black"></span>
+              <span id="legend-curve-title">Model Curve (AUC = 0.993)</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot-red"></span>
+              <span>Current Operating Point (&tau; = <span id="legend-thresh-val">0.50</span>)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Feature Vocabulary Analysis Grid -->
+      <div class="features-row">
+        <div class="features-card">
+          <div class="card-header">
+            <div class="card-title">
+              <span class="card-num">01.3</span>
+              <span>Top Spam N-Gram Predictors</span>
+            </div>
+            <span class="card-subtitle">Positive Weights (&beta; &gt; 0)</span>
+          </div>
+          <div class="features-table-wrapper" id="table-spam-features">
+            <!-- Dynamically Populated -->
+          </div>
+        </div>
+
+        <div class="features-card">
+          <div class="card-header">
+            <div class="card-title">
+              <span class="card-num">01.4</span>
+              <span>Top Ham N-Gram Predictors</span>
+            </div>
+            <span class="card-subtitle">Negative Weights (&beta; &lt; 0)</span>
+          </div>
+          <div class="features-table-wrapper" id="table-ham-features">
+            <!-- Dynamically Populated -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 02. THREAT SCANNER & PLAYGROUND                          -->
+    <!-- ======================================================== -->
+    <section class="tab-pane" id="pane-scan" role="tabpanel">
+      <!-- Section Header Block -->
+      <div class="section-header-block">
+        <div>
+          <span class="section-label">Section 02 // Live Investigation</span>
+          <h1 class="display-heading">Threat Playground</h1>
+        </div>
+        <div class="section-description">
+          Execute multi-source evidence fusion on active email payloads. Tests linguistic coercion, lookalike brand spoofing, and statistical text signals simultaneously.
+        </div>
+      </div>
+
+      <!-- Playground Grid (7:5 Split) -->
+      <div class="playground-grid">
+        <!-- Input Form Card -->
+        <div class="scanner-input-card">
+          <div class="sample-picker-bar">
+            <label for="sample-select">Load Preset Incident:</label>
+            <select id="sample-select" class="custom-select">
+              <option value="phish_o365">01 // Office 365 Credential Harvest (Phishing)</option>
+              <option value="bec_ceo">02 // Urgent CEO Wire Transfer (BEC / Social Eng.)</option>
+              <option value="spam_lottery">03 // International Sweepstakes Winner (Spam)</option>
+              <option value="benign_tech">04 // Apache SpamAssassin Announcement (Benign)</option>
+              <option value="benign_meeting">05 // Security Architecture Review Sync (Benign)</option>
+            </select>
+          </div>
+
+          <form id="threat-scan-form" class="scan-form">
+            <div class="form-group">
+              <label for="input-sender">Originating Sender / Return-Path</label>
+              <input type="text" id="input-sender" class="form-input" placeholder="e.g. security-alert@micros0ft-support.com" value="admin@micros0ft-support.com">
+            </div>
+
+            <div class="form-group">
+              <label for="input-subject">Email Subject Line</label>
+              <input type="text" id="input-subject" class="form-input" placeholder="e.g. Urgent: Account Verification Required" value="Urgent: Your Microsoft 365 Account Password Will Expire Today">
+            </div>
+
+            <div class="form-group">
+              <label for="input-body">Raw Payload Body (Plain Text or HTML)</label>
+              <textarea id="input-body" class="form-textarea" rows="8" placeholder="Paste full email body or routing headers here..."></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-swiss-primary" id="btn-run-scan">
+                Execute Multi-Layer Threat Scan
+              </button>
+              <button type="button" class="btn-swiss-secondary" id="btn-clear-scan">Clear Input</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Diagnostic Verdict Card -->
+        <div class="scanner-results-card" id="scan-results-box">
+          <div class="card-header">
+            <div class="card-title">
+              <span class="card-num">02.1</span>
+              <span>Evidence Fusion Verdict</span>
+            </div>
+            <div class="threat-level-badge level-high" id="res-badge">HIGH THREAT</div>
+          </div>
+
+          <!-- Score Display Meter -->
+          <div class="verdict-summary-row">
+            <div class="score-display-box">
+              <div class="score-number" id="gauge-score-num">88</div>
+              <div class="score-label">Threat Score</div>
+            </div>
+
+            <div class="verdict-meta">
+              <div class="meta-row">
+                <span class="meta-label">Verdict:</span>
+                <span class="meta-value text-danger" id="res-classification">PHISHING / MALICIOUS</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">ML Text Probability:</span>
+                <span class="meta-value" id="res-ml-prob">98.4% Spam Probability</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">Critical Signals:</span>
+                <span class="meta-value" id="res-critical-count">3 signals triggered</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">Engine:</span>
+                <span class="meta-value">TRACE-AI Evidence Fusion</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Evidence Fusion Dimension Meters -->
+          <div class="evidence-fusion-section">
+            <div class="section-title-sm">Multi-Source Dimension Contributions</div>
+            <div class="evidence-grid">
+              <div class="evidence-item">
+                <div class="evidence-header">
+                  <span>Forensic Analysis (22.5%)</span>
+                  <span id="ev-forensics-val">75 / 100</span>
+                </div>
+                <div class="evidence-track"><div class="evidence-fill fill-red" id="bar-ev-forensics" style="width: 75%;"></div></div>
+              </div>
+              <div class="evidence-item">
+                <div class="evidence-header">
+                  <span>NLP Social Engineering (18.0%)</span>
+                  <span id="ev-nlp-val">95 / 100</span>
+                </div>
+                <div class="evidence-track"><div class="evidence-fill fill-red" id="bar-ev-nlp" style="width: 95%;"></div></div>
+              </div>
+              <div class="evidence-item">
+                <div class="evidence-header">
+                  <span>Lookalike Domain Spoofing (13.5%)</span>
+                  <span id="ev-lookalike-val">90 / 100</span>
+                </div>
+                <div class="evidence-track"><div class="evidence-fill fill-red" id="bar-ev-lookalike" style="width: 90%;"></div></div>
+              </div>
+              <div class="evidence-item">
+                <div class="evidence-header">
+                  <span>SPF / DKIM / DMARC Auth (13.5%)</span>
+                  <span id="ev-auth-val">70 / 100</span>
+                </div>
+                <div class="evidence-track"><div class="evidence-fill fill-red" id="bar-ev-auth" style="width: 70%;"></div></div>
+              </div>
+              <div class="evidence-item">
+                <div class="evidence-header">
+                  <span>Text ML Classification (10.0%)</span>
+                  <span id="ev-ml-val">98 / 100</span>
+                </div>
+                <div class="evidence-track"><div class="evidence-fill fill-red" id="bar-ev-ml" style="width: 98%;"></div></div>
+              </div>
+              <div class="evidence-item">
+                <div class="evidence-header">
+                  <span>Attachment Executables (9.0%)</span>
+                  <span id="ev-attach-val">0 / 100</span>
+                </div>
+                <div class="evidence-track"><div class="evidence-fill" id="bar-ev-attach" style="width: 0%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Linguistic Trigger Indicators -->
+          <div class="signals-section">
+            <div class="section-title-sm">Linguistic Threat Triggers Detected</div>
+            <div class="signal-pills" id="signals-container">
+              <!-- Dynamically Populated -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 03. SYSTEM ARCHITECTURE & FORENSICS                      -->
+    <!-- ======================================================== -->
+    <section class="tab-pane" id="pane-arch" role="tabpanel">
+      <!-- Section Header Block -->
+      <div class="section-header-block">
+        <div>
+          <span class="section-label">Section 03 // Pipeline Blueprint</span>
+          <h1 class="display-heading">Architecture &amp; Forensics</h1>
+        </div>
+        <div class="section-description">
+          Detailed blueprint of the 7-stage TRACE-AI forensic detection pipeline, explaining why text-only machine learning fails on spear-phishing and how multi-source fusion solves it.
+        </div>
+      </div>
+
+      <!-- Architectural Step Cards (4x2 Grid) -->
+      <div class="architecture-flow">
+        <div class="arch-card">
+          <div>
+            <div class="arch-step-num">01</div>
+            <h3>MIME Parsing &amp; Extraction</h3>
+            <p>Decodes multi-part RFC-822 email streams. Extracts plain text and HTML bodies, email headers, and attachments with SHA-256 cryptographic hashes.</p>
+          </div>
+          <div class="arch-files"><code>email_parser.py</code> // <code>header_parser.py</code></div>
+        </div>
+
+        <div class="arch-card">
+          <div>
+            <div class="arch-step-num">02</div>
+            <h3>Forensic Header Auth</h3>
+            <p>Parses SPF, DKIM, and DMARC verification results to identify spoofed sender domains. Reconstructs chronological SMTP relay hops to uncover originating MTAs.</p>
+          </div>
+          <div class="arch-files"><code>auth_analysis.py</code> // <code>received_chain.py</code></div>
+        </div>
+
+        <div class="arch-card">
+          <div>
+            <div class="arch-step-num">03</div>
+            <h3>Domain &amp; Threat Intelligence</h3>
+            <p>Queries RDAP for domain registration age, registrar credibility, and DNS MX/A records. Flags IP-as-hostname URLs and high-risk newly registered domains.</p>
+          </div>
+          <div class="arch-files"><code>domain_intelligence.py</code> // <code>ip_intelligence.py</code></div>
+        </div>
+
+        <div class="arch-card">
+          <div>
+            <div class="arch-step-num">04</div>
+            <h3>Lookalike Domain Detection</h3>
+            <p>Detects brand impersonation through homoglyph character substitutions (e.g. 0 &rarr; o, 1 &rarr; l), Punycode IDNs, and Levenshtein edit distance.</p>
+          </div>
+          <div class="arch-files"><code>lookalike_detector.py</code></div>
+        </div>
+
+        <div class="arch-card">
+          <div>
+            <div class="arch-step-num">05</div>
+            <h3>NLP Threat Heuristics</h3>
+            <p>Deterministic linguistic analyzer detecting social engineering persuasion patterns: urgency deadlines, credential harvesting, fear of suspension, and CEO wire fraud.</p>
+          </div>
+          <div class="arch-files"><code>nlp_analyzer.py</code></div>
+        </div>
+
+        <div class="arch-card">
+          <div>
+            <div class="arch-step-num">06</div>
+            <h3>Dual Machine Learning</h3>
+            <p>Combines a TF-IDF + Logistic Regression text classifier (100k features) on SpamAssassin with a Random Forest tabular classifier trained on forensic metadata.</p>
+          </div>
+          <div class="arch-files"><code>train_text.py</code> // <code>predict_text.py</code></div>
+        </div>
+
+        <div class="arch-card">
+          <div>
+            <div class="arch-step-num">07</div>
+            <h3>Evidence Fusion Engine</h3>
+            <p>Integrates 8 independent evidence families with weighted voting (forensics 22.5%, NLP 18%, lookalike 13.5%, auth 13.5%, ML 10%) and multi-family reinforcement.</p>
+          </div>
+          <div class="arch-files"><code>evidence_fusion.py</code></div>
+        </div>
+
+        <div class="arch-card">
+          <div>
+            <div class="arch-step-num">08</div>
+            <h3>Neo4j Graph Correlation</h3>
+            <p>Stores emails, domains, IPs, URLs, and attachment hashes in a graph database. Queries cross-case graph traversals to uncover coordinated phishing campaigns.</p>
+          </div>
+          <div class="arch-files"><code>neo4j_client.py</code> // <code>correlation.py</code></div>
+        </div>
+      </div>
+
+      <!-- Axiom / Theoretical FAQ -->
+      <div class="faq-section">
+        <h2>Axiom: Why Spam Detection is Not Phishing Detection</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>01. Semantic Divergence</h3>
+            <p>
+              Spam is unsolicited bulk marketing (e.g. discount loans, cheap pharmaceuticals). Phishing is targeted impersonation and credential theft. The vocabulary of sophisticated spear-phishing is virtually indistinguishable from legitimate business mail.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>02. The Single-Sentence Trap</h3>
+            <p>
+              A spear-phishing email can read simply: <em>"Hi John, please review the attached corporate invoice."</em> Pure text machine learning will classify this as 100% Benign (HAM). Only header inspection (SPF fail) and attachment analysis will catch it.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>03. Multi-Source Redundancy</h3>
+            <p>
+              By treating text ML as only <strong>10%</strong> of the final score and requiring independent corroboration from Authentication, Forensics, and Lookalike Intelligence, TRACE-AI eliminates single-point-of-failure vulnerabilities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                       -->
+  <!-- ============================================================ -->
+  <footer class="app-footer">
+    <div class="footer-content">
+      <span>MAILGUARD // TRACE-AI Core Engine v0.2.0 &bull; Swiss International Typographic Specification</span>
+      <span class="footer-pill">Universal Clarity</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
